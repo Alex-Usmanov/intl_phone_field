@@ -203,25 +203,18 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
       child: InkWell(
         borderRadius: widget.dropdownDecoration.borderRadius,
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8),
+          padding: const EdgeInsets.symmetric(vertical: 6),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              if (widget.showDropdownIcon) ...[
-                Icon(Icons.arrow_drop_down),
-                SizedBox(width: 4)
-              ],
               Text(
                 _selectedCountry['flag'],
-                style: TextStyle(fontSize: 24),
+                style: TextStyle(fontSize: 20),
               ),
-              SizedBox(width: 8),
-              FittedBox(
-                child: Text(
-                  _selectedCountry['dial_code'],
-                  style: TextStyle(fontWeight: FontWeight.w700),
-                ),
-              ),
+              if (widget.showDropdownIcon) ...[
+                Transform.rotate(child: Icon(Icons.arrow_back_ios), angle: -3.14/2),
+                SizedBox(width: 4)
+              ],
               SizedBox(width: 8),
             ],
           ),
