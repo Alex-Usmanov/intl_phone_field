@@ -203,7 +203,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
       child: InkWell(
         borderRadius: widget.dropdownDecoration.borderRadius,
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 6),
+          padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 4),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -212,10 +212,10 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
                 style: TextStyle(fontSize: 20),
               ),
               if (widget.showDropdownIcon) ...[
-                Transform.rotate(child: Icon(Icons.arrow_back_ios, size: 8), angle: -3.14/2),
+                Transform.rotate(child: Icon(Icons.arrow_back_ios, size: 12), angle: -3.14/2),
                 SizedBox(width: 4)
               ],
-              SizedBox(width: 8),
+              SizedBox(width: 4),
             ],
           ),
         ),
