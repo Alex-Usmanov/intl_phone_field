@@ -211,6 +211,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
                 _selectedCountry['flag'],
                 style: TextStyle(fontSize: 20),
               ),
+              SizedBox(width: 4),
               if (widget.showDropdownIcon) ...[
                 Transform.rotate(child: Icon(Icons.arrow_back_ios, size: 12), angle: -3.14/2),
                 SizedBox(width: 4)
